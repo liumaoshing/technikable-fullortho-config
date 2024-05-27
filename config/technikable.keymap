@@ -36,6 +36,13 @@
             bindings = <&kp MINUS &kp MINUS &kp MINUS &kp MINUS &kp MINUS &kp MINUS &kp MINUS &kp MINUS &kp MINUS &kp MINUS>;
             label = "DIVIDER";
         };
+
+        AlightE: AlightE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp D &kp A &kp V &kp I &kp D &kp DOT &kp T &kp E &kp A &kp N &kp O &kp AT &kp A &kp L &kp I &kp G &kp H &kp T &kp DOT &kp C &kp O &kp M>;
+            label = "ALIGHTE";
+        };
     };
 
     keymap {
@@ -53,9 +60,9 @@
 
         nav_layer {
             bindings = <
-&trans  &trans         &trans        &trans         &Divider      &trans                 &kp MINUS  &kp N7  &kp N8  &kp N9  &kp PLUS      &trans
-&trans  &kp LS(EXCL)   &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)          &kp DOT    &kp N4  &kp N5  &kp N6  &kp KP_EQUAL  &trans
-&trans  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)  &kp LS(RPAR)           &kp N0     &kp N1  &kp N2  &kp N3  &kp FSLH      &trans
+&trans  &AlightE       &trans        &trans         &Divider      &kp F13                &kp MINUS  &kp N7  &kp N8  &kp N9  &kp PLUS   &trans
+&trans  &kp LS(EXCL)   &kp LS(AT)    &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)          &kp DOT    &kp N4  &kp N5  &kp N6  &kp EQUAL  &kp DEL
+&trans  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)  &kp LS(RPAR)           &kp N0     &kp N1  &kp N2  &kp N3  &kp FSLH   &trans
                        &trans        &trans         &trans        &trans         &trans  &trans     &trans  &trans
             >;
         };
@@ -64,7 +71,7 @@
             bindings = <
 &trans  &trans  &trans    &kp UP    &trans     &trans          &trans        &trans        &trans        &trans        &trans        &trans
 &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&trans  &trans  &trans    &kp F4    &kp F5     &trans          &trans        &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans    &trans    &kp F5     &trans          &trans        &trans        &trans        &trans        &trans        &trans
                 &trans    &trans    &trans     &trans  &trans  &trans        &trans        &trans
             >;
         };
